@@ -1,0 +1,24 @@
+# name : Akash More
+"""This is program to get nth term in fibonacci series and print array containing terms up to that 
+term """
+fibarray = [0, 1]
+
+
+def fibonacciSeries(n):
+    if n <= 0:
+        print("Incorrect Input!")
+    elif n == 1:
+        return fibarray[n-1]
+    elif n == 2:
+        return fibarray[n-1]
+    elif len(fibarray) == n:
+        return fibarray[n-1]
+    else:
+        for i in range(len(fibarray), n):
+            fibarray.append(fibarray[i-1] + fibarray[i-2])
+        return fibarray[n-1]
+
+
+a = int(input("Please enter term for which you want to find fibonacci number : "))
+print(fibonacciSeries(a))
+print("This is fibonacci series upto ", a, " is ", fibarray)
