@@ -1,0 +1,12 @@
+# Name: Akash More
+# Program for calculating area of the rectangle
+length = int(input("Enter the length : "))
+breadth = int(input("Enter the breadth : "))
+
+
+def areaofRectangle(length, breadth):
+    area = length * breadth
+    return area
+
+
+print("Area of the ractangle is ",areaofRectangle(length, breadth))
