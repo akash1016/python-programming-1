@@ -1,0 +1,11 @@
+# Name : Akash More
+# Program for calculating volume of the sphere
+radius = int(input("Enter a radius of the sphere : "))
+
+
+def volumeOfsphere(radius):
+    pie = 3.14
+    return 4/3 * pie * (radius * radius * radius)
+
+
+print("This is the volume of sphere for given radius is ", volumeOfsphere(radius))
