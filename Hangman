@@ -1,0 +1,89 @@
+word = "apple"
+
+list1 = list(word)
+
+print(list1)
+
+correct_guessed = []
+
+incorrect_guessed = []
+
+correct_guessed_letter_count = 0
+
+lives = 10
+
+ 
+
+ 
+
+ 
+
+ 
+
+   
+
+def guessing():
+
+    global lives
+
+    for i in range(lives):
+
+        global correct_guessed_letter_count
+
+        if correct_guessed_letter_count == len(word):
+
+            print("You guessed word right")
+
+            break
+
+        guess_letter = user_input()
+
+        if list1[correct_guessed_letter_count] == guess_letter:
+
+            print("you guessed the letter right!")
+
+            correct_guessed.append(guess_letter)
+
+            printing(correct_guessed, incorrect_guessed, lives-i-1)
+
+            correct_guessed_letter_count += 1
+
+        else :
+
+            print("You guessed it wrong!")
+
+            incorrect_guessed.append(guess_letter)
+
+            printing(correct_guessed, incorrect_guessed, lives-i-1)
+
+ 
+
+def printing(correct_guessed, incorrect_guessed, lives):
+
+    print("Lives left : " + str(lives) )
+
+    print("Correct Guessed :")
+
+    for letter in correct_guessed :
+
+        print(letter, end=",")
+
+    print("InCorrect Guessed :")
+
+    for letter in incorrect_guessed :
+
+        print(letter, end=",")
+
+ 
+
+def user_input():
+
+    guess_letter = input("Enter your guess letter : ")
+
+    guess_letter = guess_letter.lower()
+
+    return guess_letter
+
+   
+
+guessing()
